@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"crossorigin="anonymous"/>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- nav bar section -->
+    <nav>
+      <div class="logo">Lab<span>Botanical</span></div>
+      <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/About">ABOUT</a></li>
+          <li><a href="/#products">PRODUCTS</a></li>
+          <li><a href="/user/occasion">OCCASIONS</a></li>
+          <li><a href="/Contact">CONTACT US</a></li>
+          <li><a href="/blog">BLOG</a></li>
+      </ul>
+      <div class="nav-icons">
+          <a href="/cart" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+          <a href="/user/login" title="Login"><i class="fas fa-user"></i></a>
+          <a href="/user/like" title="Like"><i class="fas fa-heart"></i></a>
+      </div>
+  </nav>
+
+    <!-- Header -->
+    <header>
+      <h1>Contact Us</h1>
+      <p>
+        We'd love to hear from you! Fill out the form below to get in touch.
+      </p>
+    </header>
+    
+    <!-- Display Success or Error Messages -->
+    <% if (success) { %>
+      <div class="notification"><%= success %></div>
+    <% } %>
+    
+    <% if (error) { %>
+      <div class="notification"><%= error %></div>
+    <% } %>
+    
+    
+    <!-- Contact Form -->
+    <section class="form">
+      <form class="contact-form" action="/contact/submit" method="POST">
+        <h2>Send Us a Message</h2>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">Lab Botanical</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-contact">
+          <p><strong>Contact Us:</strong></p>
+          <p>Email: info@labbotanical.com</p>
+          <p>Phone: (+92) 338197426</p>
+          <p>Address: F-6 Islamabad, Pakistan</p>
+        </div>
+        <div class="footer-newsletter">
+          <p>Subscribe to our Newsletter:</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lab Botanical. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

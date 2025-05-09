@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 90px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  padding-top: 45px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+nav .logo span {
+  color: #ff69b4;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative; /* To allow for any future dropdowns or effects */
+}
+
+nav ul li a {
+  line-height: 80px;
+  padding: 12px 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background: rgb(216, 112, 147);
+  border-radius: 6px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  color: white; /* Changed to white for consistency with navigation */
+  font-size: 20px;
+  line-height: 80px; /* Aligns icons vertically with the navigation */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-icons a:hover {
+  color: rgb(216, 112, 147); /* Change icon color on hover */
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  animation: smoothFade 30s linear infinite;
+}
+
+.banner_btn a {
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(53, 42, 42); /* Text color */
+  background: rgb(231, 131, 148); /* Button background color */
+  border: 0.5px solid rgb(245, 133, 152);
+  z-index: 1;
+  position: relative;
+  transition: color 0.5s, transform 0.5s;
+}
+@keyframes smoothFade {
+  0% {
+    background-image: url(https://media.istockphoto.com/id/921668042/photo/rose-flowers-on-white-wooden-background-flat-lay-top-view.jpg?s=612x612&w=0&k=20&c=ZWC1XdwoH1MpC_4OoqR6xK32U7V6gNpNHgIJ7B9gIYU=);
+  }
+  25% {
+    background-image: url(https://media.istockphoto.com/id/1136539152/photo/flowers-composition-background-pink-flowers-ranunkulus-and-eucalyptus-leaves-frame-on-white.jpg?s=612x612&w=0&k=20&c=tj1g0QjpZ65Q_-iR7NTzCExzUuoRmDSrTvSwqOIbKAI=);
+  }
+  50% {
+    background-image: url(https://media.istockphoto.com/id/1037292352/photo/bouquet-of-beautiful-pink-roses-on-white-wooden-background-top-view-copy-space.jpg?s=612x612&w=0&k=20&c=QQTFOsQ1d35t2qXNH_MSXlMAPJNt-VviiY2MRvviYAg=);
+  }
+  75% {
+    background-image: url(https://media.istockphoto.com/id/889309672/photo/frame-from-the-pattern-of-dried-flowers-on-a-white-wooden-background-top-view-copy-space.jpg?s=612x612&w=0&k=20&c=sn0n70uEKvh7v3m1ZhWiDJRyHKIIAq9oz8adPkbjWJ4=);
+  }
+  100% {
+    background-image: url(https://media.istockphoto.com/id/1025237894/photo/fresh-pink-eustoma-flowers.jpg?s=612x612&w=0&k=20&c=LfRKCjAkorv3h7UU4p_B62s2bkvAn3wgXYszz8dKJXk=);
+  }
+}
+
+.banner_text {
+  text-align: center;
+  color: rgb(73, 71, 71);
+  transition: transform 0.5s;
+}
+
+.banner_text h1 {
+  font-size: 130px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.banner_text p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.banner_btn {
+  margin-top: 20px; /* Adjusted for better spacing */
+}
+
+.banner_btn a {
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  color: rgb(27, 26, 26);
+  border: 0.5px solid rgb(15, 15, 15);
+  z-index: 1;
+  position: relative;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.banner_btn a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e48080;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner_btn a:hover span {
+  width: 100%;
+}
+
+.banner_btn a:hover {
+  color: white;
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 770px) {
+  .banner_text h1 {
+    font-size: 44px;
+  }
+
+  .banner_btn a {
+    display: block;
+    margin: 10px auto; /* Adjusted for better spacing */
+  }
+}
+
+/* Products Section */
+#products {
+  width: 100%;
+  padding: 70px 0;
+  background-color: rgb(225, 225, 225);
+}
+.title_text {
+  text-align: center;
+  padding: 10px;
+  color: #ff8a8a;
+}
+.products-box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.product {
+  flex-basis: 23%;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  height: 350px;
+}
+.product h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ff8a8a;
+}
+.product p {
+  font-size: 16px;
+  color: #333;
+}
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 70px 0;
+  background-color: rgb(214, 214, 214);
+}
+.testimonial-box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial {
+  background: #ff8a8a;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Footer Section */
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-logo {
+  font-size: 28px;
+  color: #ff8a8a;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: #ff8a8a;
+}
+
+.footer-contact {
+  text-align: center;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-newsletter {
+  text-align: center;
+}
+
+.footer-newsletter form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border: 1px solid #ff8a8a;
+  border-radius: 5px;
+  margin-right: 5px;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 15px;
+  background: #ff8a8a;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #ff8a8a;
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ff8a8a;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  color: black;
+  margin-top: 20px;
+}
+
+.liked-item {
+  background: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.liked-item h2 {
+  color: #ff8a8a;
+}

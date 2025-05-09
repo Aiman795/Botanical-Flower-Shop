@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botanical Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/cart.css" />
+  </head>
+  <body>
+    <!-- nav bar section -->
+    <nav>
+      <div class="logo">Lab<span>Botanical</span></div>
+      <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/About">ABOUT</a></li>
+          <li><a href="/#products">PRODUCTS</a></li>
+          <li><a href="/user/occasion">OCCASIONS</a></li>
+          <li><a href="/Contact">CONTACT US</a></li>
+          <li><a href="/blog">BLOG</a></li>
+      </ul>
+      <div class="nav-icons">
+          <a href="/cart" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+          <a href="/user/login" title="Login"><i class="fas fa-user"></i></a>
+          <a href="/user/like" title="Like"><i class="fas fa-heart"></i></a>
+      </div>
+  </nav>
+  
+    <!-- banner section -->
+    <section id="banner">
+      <div class="banner_text">
+        <h1>Botanical Lab</h1>
+        <p>Bring Nature to Your Home</p>
+        <div class="banner_btn">
+          <a  href="/#products"><span></span>Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+      <div class="title_text">
+        <p>OUR PRODUCTS</p>
+        <h1>Beautiful Flowers</h1>
+      </div>
+      <div class="products-box">
+        <div class="product" data-product='{"name":"Rose","price":29.99}'>
+          <a href="/cart" class="product-link">
+            <img src="/rose.jpeg" alt="Rose" />
+            <h2>Rose</h2>
+            <p>$29.99</p>
+          </a>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="1" data-name="Rose Bouquet" data-price="29.99">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('Rose', 29.99)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product" data-product='{"name":"Lily","price":19.99}'>
+          <a href="/cart" class="product-link">
+            <img src="/lily.jpeg" alt="Lily" />
+            <h2>Lily</h2>
+            <p>$19.99</p>
+          </a>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="2" data-name="Lily Bouquet" data-price="19.99">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('lily', 19.99)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/sunflower.jpeg" alt="Sunflower" />
+          <h2>Sunflower</h2>
+          <p>$14.99</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="3" data-name="Sunflower Bouquet" data-price="14.99">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('sunflower', 14.99)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/pink tulip.jpeg" alt="Pink Tulip" />
+          <h2>Pink Tulip</h2>
+          <p>$20.99</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="4" data-name="Pink Tulip Bouquet" data-price="20.99">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('tulip', 20.99)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/lily.jpeg" alt="Lily" />
+          <h2>Lily</h2>
+          <p>$18.00</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="5" data-name="Lily" data-price="18.00">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('lily', 18)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/gerbera.jpeg" alt="Gerbera" />
+          <h2>Gerbera</h2>
+          <p>$25.00</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="6" data-name="Plant 6" data-price="25.00">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('gerbera', 25)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/jasmine.jfif" alt="Jasmine" />
+          <h2>Jasmine</h2>
+          <p>$15.00</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="7" data-name="Plant 7" data-price="15.00">
+              Add to Cart
+            </button>
+
+            <button class="like-button" onclick="addToLike('jasmine', 15)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/Lotus.jfif" alt="Lotus" />
+          <h2>Lotus</h2>
+          <p>$22.00</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="8" data-name="Plant 8" data-price="22.00">
+              Add to Cart
+            </button>
+            <button class="like-button" onclick="addToLike('Lotus', 22)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="/orchid.jfif" alt="Orchid" />
+          <h2>Orchid</h2>
+          <p>$27.00</p>
+          <div class="product-buttons">
+            <button class="add-to-cart" data-id="9" data-name="Plant 3" data-price="25.00">
+              Add to Cart
+            </button>
+            <button class="like-button" onclick="addToLike('orchid', 27)">
+              <i class="fas fa-heart" style="color: rgb(253, 253, 253)"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <div class="title_text">
+        <p>WHAT OUR CUSTOMERS SAY</p>
+        <h1>Testimonials</h1>
+      </div>
+      <div class="testimonial-box">
+        <div class="testimonial">
+          <p>
+            "The flowers from Lab Botanical are always fresh and beautiful!"
+          </p>
+          <h3>- Jaweria K.</h3>
+        </div>
+        <div class="testimonial">
+          <p>
+            "I love the variety of products and the excellent customer service."
+          </p>
+          <h3>- Hafsa A.</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">Lab Botanical</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-contact">
+          <p><strong>Contact Us:</strong></p>
+          <p>Email: info@labbotanical.com</p>
+          <p>Phone: (+92) 338197426</p>
+          <p>Address: F-6 Islamabad, Pakistan</p>
+        </div>
+        <div class="footer-newsletter">
+          <p>Subscribe to our Newsletter:</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lab Botanical. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="/index.js"></script>
+  </body>
+</html>

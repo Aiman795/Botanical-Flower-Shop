@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botanical Shop - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/cart.css" />
+  </head>
+  <body>
+    <!-- nav bar section -->
+    <nav>
+      <div class="logo">Lab<span>Botanical</span></div>
+      <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/About">ABOUT</a></li>
+          <li><a href="/#products">PRODUCTS</a></li>
+          <li><a href="/user/occasion">OCCASIONS</a></li>
+          <li><a href="/Contact">CONTACT US</a></li>
+          <li><a href="/Blog">BLOG</a></li>
+      </ul>
+      <div class="nav-icons">
+          <a href="/cart" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+          <a href="/user/login" title="Login"><i class="fas fa-user"></i></a>
+          <a href="/user/like" title="Like"><i class="fas fa-heart"></i></a>
+      </div>
+  </nav>
+
+    <!-- Cart Items Section -->
+    <main class="cart-container">
+      <div id="cart-items"></div>
+      <!-- Dynamic Cart Items will be populated here -->
+
+      <div class="cart-summary">
+        <h2>Cart Summary</h2>
+        <p>
+          <span class="highlight">Total Items:</span>
+          <span id="total-items">0</span>
+        </p>
+        <p>
+          <span class="highlight">Grand Total:</span> $<span id="total-price"
+            >0.00</span
+          >
+        </p>
+        <button class="checkout-btn" onclick="proceedToCheckout()">
+          Proceed to Checkout
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">Lab Botanical</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-contact">
+          <p><strong>Contact Us:</strong></p>
+          <p>Email: info@labbotanical.com</p>
+          <p>Phone: (+92) 338197426</p>
+          <p>Address: F-6 Islamabad, Pakistan</p>
+        </div>
+        <div class="footer-newsletter">
+          <p>Subscribe to our Newsletter:</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lab Botanical. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Cart Management -->
+    <script src="/cart.js"></script>
+  </body>
+</html>

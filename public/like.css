@@ -1,0 +1,55 @@
+/* Liked Items Section */
+body {
+  background: url("https://media.istockphoto.com/id/1320449190/photo/summer-background.jpg?s=612x612&w=0&k=20&c=pQhO1nPGWjOl-Lk9Y36c9NBCmTT17N0eCe-OynK_rTY=")
+    no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#liked-items {
+  padding: 50px 20px;
+  background-color: whitesmoke;
+}
+
+#liked-items .title_text {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+#liked-items .title_text p {
+  font-size: 18px;
+  color: #0d0e0d;
+}
+
+#liked-items .title_text h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#like-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#like-items .liked-item {
+  background-color: #cfcdcd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#like-items .liked-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#like-items .liked-item p {
+  font-size: 18px;
+  color: #555;
+}

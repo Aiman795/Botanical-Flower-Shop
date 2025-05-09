@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+  <body>
+    <!-- nav bar section -->
+    <nav>
+      <div class="logo">Lab<span>Botanical</span></div>
+      <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/About">ABOUT</a></li>
+          <li><a href="/#products">PRODUCTS</a></li>
+          <li><a href="/user/occasion">OCCASIONS</a></li>
+          <li><a href="/Contact">CONTACT US</a></li>
+          <li><a href="/Blog">BLOG</a></li>
+      </ul>
+      <div class="nav-icons">
+          <a href="/cart" title="Cart"><i class="fas fa-shopping-cart"></i></a>
+          <a href="/user/login" title="Login"><i class="fas fa-user"></i></a>
+          <a href="/user/like" title="Like"><i class="fas fa-heart"></i></a>
+      </div>
+  </nav>
+
+  <!-- Display Success or Error Messages -->
+  <% if (success) { %>
+    <div class="notification success"><%= success %></div>
+  <% } %>
+  
+  <% if (error) { %>
+    <div class="notification error"><%= error %></div>
+  <% } %>
+  
+  <div class="container">
+    <form id="login-form" action="/user/login" method="POST">
+      <h1>Login</h1>
+      <div class="input-control">
+        <label for="login-email">Email</label>
+        <input id="login-email" name="email" type="text" required />
+        <!-- <div class="error"></div> -->
+      </div>
+      <div class="input-control">
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" type="password" required />
+        <!-- <div class="error"></div> -->
+      </div>
+      <button type="submit">Log In</button>
+      <p class="register-link">
+        Don't have an account?
+        <a href="/user/signup" style="color: #e97be3">Sign Up</a>
+      </p>
+      <div id="error-message" style="display: none; color: red;"></div>
+    </form>
+  </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">Lab Botanical</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-contact">
+          <p><strong>Contact Us:</strong></p>
+          <p>Email: info@labbotanical.com</p>
+          <p>Phone: (+92) 338197426</p>
+          <p>Address: F-6 Islamabad, Pakistan</p>
+        </div>
+        <div class="footer-newsletter">
+          <p>Subscribe to our Newsletter:</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lab Botanical. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script defer src="/login.js"></script>
+  </body>
+</html> 

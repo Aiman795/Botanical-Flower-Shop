@@ -1,0 +1,279 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 90px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  padding-top: 45px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+nav .logo span {
+  color: #ff69b4;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  position: relative; /* To allow for any future dropdowns or effects */
+}
+
+nav ul li a {
+  line-height: 80px;
+  padding: 12px 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background: rgb(216, 112, 147);
+  border-radius: 6px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  color: white; /* Changed to white for consistency with navigation */
+  font-size: 20px;
+  line-height: 80px; /* Aligns icons vertically with the navigation */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-icons a:hover {
+  color: rgb(216, 112, 147); /* Change icon color on hover */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  background: url("https://media.istockphoto.com/id/1320449190/photo/summer-background.jpg?s=612x612&w=0&k=20&c=pQhO1nPGWjOl-Lk9Y36c9NBCmTT17N0eCe-OynK_rTY=")
+    no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Blog Banner */
+#blog-banner {
+  background: url("banner-blog.jpg") no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+#blog-banner .banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#blog-banner .banner-text p {
+  font-size: 1.2rem;
+}
+
+/* Blog Content */
+#blog-content {
+  padding: 20px;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-post {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 15px;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.post-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: white;
+  background-color: pink;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: pink;
+}
+
+/* Footer Section */
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-logo {
+  font-size: 28px;
+  color: #ff8a8a;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: #ff8a8a;
+}
+
+.footer-contact {
+  text-align: center;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-newsletter {
+  text-align: center;
+}
+
+.footer-newsletter form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border: 1px solid #ff8a8a;
+  border-radius: 5px;
+  margin-right: 5px;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 15px;
+  background: #ff8a8a;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #ff8a8a;
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ff8a8a;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  color: black;
+  margin-top: 20px;
+}
+
+.liked-item {
+  background: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.liked-item h2 {
+  color: #ff8a8a;
+}
